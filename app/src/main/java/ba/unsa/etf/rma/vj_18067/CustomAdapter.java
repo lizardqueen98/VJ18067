@@ -22,7 +22,7 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
     private static LayoutInflater inflater=null;
     public Resources res;
     Muzicar tempValues=null;
-    int i=0;
+    //int i=0;
 
     /*************  CustomAdapter Constructor *****************/
     public CustomAdapter(Activity a, ArrayList d,Resources resLocal) {
@@ -39,6 +39,7 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
     }
 
     /******** What is the size of Passed Arraylist Size ************/
+    //ovo su neke tri metode koje su absolutli beskorisne, ali interfejs zahtjeva da budu implementirane
     public int getCount() {
 
         if(data.size()<=0)
@@ -114,7 +115,7 @@ public class CustomAdapter extends BaseAdapter implements View.OnClickListener {
         }
         return vi;
     }
-
+    //opet metoda koja mora biti implementirana
     @Override
     public void onClick(View v) {
         Log.v("CustomAdapter", "=====Row button clicked=====");

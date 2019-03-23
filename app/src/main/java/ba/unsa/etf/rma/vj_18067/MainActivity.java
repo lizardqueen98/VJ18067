@@ -1,5 +1,6 @@
 package ba.unsa.etf.rma.vj_18067;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //private ArrayAdapter<String> adapter;
     private CustomAdapter customAdapter;
     public MainActivity mainActivity = null;
-    public ArrayList<Muzicar> muzicari = new ArrayList<>();
+    public static ArrayList<Muzicar> muzicari = new ArrayList<>();
 
 
     @Override
@@ -50,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
         /******** Take some data in Arraylist ( CustomListViewValuesArr ) ***********/
         setListData();
 
-        Resources res =getResources();
+        Resources res = getResources();
         lista = ( ListView )findViewById( R.id.list );  // List defined in XML ( See Below )
 
         /**************** Create Custom Adapter *********/
-        customAdapter = new CustomAdapter( mainActivity, muzicari,res );
+        customAdapter = new CustomAdapter( mainActivity, muzicari, res);
         lista.setAdapter( customAdapter );
     }
     public void setListData()
@@ -69,13 +70,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onItemClick(int mPosition)
     {
-        Muzicar tempValues = ( Muzicar ) muzicari.get(mPosition);
+        Muzicar odabrani = ( Muzicar ) muzicari.get(mPosition);
 
 
         // SHOW ALERT
 
-        Toast.makeText(mainActivity, ""+tempValues.getIme() +" Image:"+tempValues.getSlikaZanra() +" Url:"+tempValues.getZanr(),
-        Toast.LENGTH_LONG).show();
+        /*Toast.makeText(mainActivity, ""+tempValues.getIme() +" Image:"+tempValues.getSlikaZanra() +" Url:"+tempValues.getZanr(),
+        Toast.LENGTH_LONG).show();*/
+        //ovako se pokrece nova aktivnost, nesto kao otvaranje novog prozora
+        //startActivity(new Intent(getApplicationContext(),NewActivity.class));
+        /*Intent intent = new Intent(getApplicationContext(),NewActivity.class);
+        intent.putExtra("Muzicar", odabrani.getIme());*/
+
     }
 }
 

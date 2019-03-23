@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">VJ-18067</string>
+    <string name="prvi_tekst">1</string>
+    <string name="drugi_tekst">2</string>
+    <string name="treci_tekst">3</string>
+    <string name="cetvrti_tekst">4</string>
+    <string name="peti_tekst">5</string>
+    <string name="o_izvodjacu">O izvođaću:</string>
+    <string name="top_pet">Top pet pjesama:</string>
 </resources>
