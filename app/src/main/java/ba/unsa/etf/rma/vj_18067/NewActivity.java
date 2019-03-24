@@ -29,13 +29,14 @@ public class NewActivity extends AppCompatActivity {
         textView5 = (TextView) findViewById(R.id.textView5);
         textView6 = (TextView) findViewById(R.id.textView6);
 
+        /*
         Muzicar muzicar = muzicari.get(1);
 
         textView2.setText(muzicar.getIme());
         textView3.setText(muzicar.getPrezime());
         textView4.setText(muzicar.getBiografija());
         textView5.setText(muzicar.getZanr());
-        textView6.setText(muzicar.getWebStranica());
+        textView6.setText(muzicar.getWebStranica());*/
 
 
     }
